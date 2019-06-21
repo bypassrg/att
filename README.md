@@ -157,7 +157,8 @@ Please make sure the NAT acceleration is enabled. (Web GUI -> Tools-> HW acceler
 - [ ] Ask Merlin to update *wpa_supplicant*.
 - [ ] Try to use Openwrt/ddwrt to bypass AT&T's RG.
 
-		
+### Donation
+- Bitcoin: 18hUjgNARRKWXr7hG9n62pWscZ4862TL6Q
 
 [Back to menu](#menu)
 ## Credits & References

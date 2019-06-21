@@ -1,6 +1,6 @@
 # BypassAttRG
 Using Asuswrt-Merlin to bypass AT&amp;T's residential gateway. (rt-ac68u <--> ~BGW210~ <--> ONT)  
-This method only requires Asuswrt-Merlin. No *pfSense*, or *netgraph*  or dumb switch needed.  
+This method only requires Asuswrt-Merlin. No *pfSense*, or *netgraph*, or ubiquiti devices,  or dumb switch needed.  
 I only tested with rt-ac68u, but the method should work for all Asuswrt-Merlin based wireless routers (Please let me know if it doesn't).  
 Now, the home router connects optical network terminal(ONT) directly. You should setup the firewall wisely.
 
@@ -147,6 +147,10 @@ I cannot use the build-in wpa\_supplicant v0.6 in Asuswrt-Merlin to achieve my g
 Some useful links
 - [Compile-packages-from-sources](https://github.com/Entware/Entware/wiki/Compile-packages-from-sources)
 - [Compile-custom-programs-from-source](https://github.com/RMerl/asuswrt-merlin/wiki/Compile-custom-programs-from-source)
+
+### Slow Speed
+Please make sure the NAT acceleration is enabled. (Web GUI -> Tools-> HW acceleration). If it says *incompatible with*, you need to turn off some services.
+
 
 ### To-dos
 - [ ] Cross compile *wpa_supplicant*, so we don't need to install *Entware*.

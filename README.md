@@ -31,7 +31,7 @@ Credit: [earlz](http://earlz.net/view/2012/06/07/0026/rooting-the-nvg510-from-th
 - Downgrade firmware to [9.0.6h2d30](firmware/nvg510/nbxv9.0.6h2d30.bin)
 - Follow this guide [Rooting The NVG510 from the WebUI](http://earlz.net/view/2012/06/07/0026/rooting-the-nvg510-from-the-webui).  
 If NVG510 has no connection to internet, you may want to setup a local server for NVG510 to download the script.
-   Download [http://earlz.net/static/backdoor.nvg510.sh](http://earlz.net/static/backdoor.nvg510.sh)
+  - Download [http://earlz.net/static/backdoor.nvg510.sh](http://earlz.net/static/backdoor.nvg510.sh)
   - Using Python to setup a simple http server. `python -m http.server`
   - Change _uploadfile_ to `errrr && wget http://YOUR_LOCAL_IP:8000/backdoor.nvg510.sh -O /tmp/backdoor.sh && source /tmp/backdoor.sh && errr`
 <!-- - If it is successful, you should see something like this: -->
@@ -91,8 +91,7 @@ Credit: [nomotion](https://www.nomotion.net/blog/sharknatto/)
 ## Configuring 802.1x authentication
 ### Decode Credentials 
 Credit: [devicelocksmith](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html)
-<!-- - Follow this guide: [EAP-TLS credentials decoder for Motorola and Arris gateways. Ultimate fiber router bypass!](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html) -->
-  <!-- - Basically, unzip *cert.tar*  -->
+
 - Download decoder v1.0.4: [win](decoder/win/mfg_dat_decode_1_04.zip), [linux](decoder/linux/mfg_dat_decode_1_04.tar.gz), [mac](decoder/mac/mfg_dat_decode_1_04_macosx.zip)
   - [Original download page](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html)
 - Copy *mfg.dat*, unzip *cert.tar* to the same location as *mfg_dat_decode*.
@@ -100,9 +99,9 @@ Credit: [devicelocksmith](https://www.devicelocksmith.com/2018/12/eap-tls-creden
 
 ### Update wpa_supplicant in Asuswrt-Merlin
 
-I cannot use the build-in wpa\_supplicant v0.6 in Asuswrt-Merlin to achieve my goal, so I compiled the wpa\_supplicant v2.7 from [Entware repository](https://github.com/Entware/Entware). Here I provide the necessary binary files. If you want to compile them by yourself which you should do, [check this](#compile-entware-packages-from-source).
-<!-- - Download the [packages](packages.tar.gz) -->
-- start python http server. `python -m http.server`
+I cannot use the build-in *wpa\_supplicant v0.6* in Asuswrt-Merlin to achieve my goal, so I compiled the *wpa\_supplicant* v2.7 from [Entware repository](https://github.com/Entware/Entware). Here I provide the necessary binary files. If you are working on a different model, you may need to compile *wpa\_supplicant* from the source. [check this](#compile-entware-packages-from-source).
+
+- Start python http server. `python -m http.server`
 - ssh to your router. (You need to enable ssh in the web GUI.)
 - Download the [packages](packages.tar.gz) and unzip it. `wget https://github.com/bypassrg/att/blob/master/packages.tar.gz && tar -xzf packages.tar.gz`
 - Download *EAP-TLS_8021x_XXXX* file from your local http server. `wget https://YOUR_LOCAL_IP:8000/EAP-TLS_8021x_XXXX.tar.gz`
@@ -149,14 +148,16 @@ Some useful links
 - [Compile-packages-from-sources](https://github.com/Entware/Entware/wiki/Compile-packages-from-sources)
 - [Compile-custom-programs-from-source](https://github.com/RMerl/asuswrt-merlin/wiki/Compile-custom-programs-from-source)
 
-### Slow Speed
-Please make sure the NAT acceleration is enabled. (Web GUI -> Tools-> HW acceleration). If it says *incompatible with*, you need to turn off some services.
+### FAQ
+1. Q: **Slow Speed**: The speed doesn't reach to the speed that I subscribed to.    
+   A: Please make sure the NAT acceleration is enabled. (Web GUI -> Tools-> HW acceleration). If it says *incompatible with*, you need to turn off some services.
 
 
 ### To-dos
 - [ ] Cross compile *wpa_supplicant*, so we don't need to install *Entware*.
 - [ ] Ask Merlin to update *wpa_supplicant*.
 - [ ] Try to use Openwrt/ddwrt to bypass AT&T's RG.
+- [ ] Write a doc for compiling Entware packages from the source.
 
 ### Donation
 - Bitcoin: 18hUjgNARRKWXr7hG9n62pWscZ4862TL6Q

@@ -134,6 +134,7 @@ I cannot use the build-in wpa\_supplicant v0.6 in Asuswrt-Merlin to achieve my g
 - In *WAN* tab, set *MAC Address* to *identity* value which you can find in *wpa_supplicant.conf*.
 - Enable *AiProtection*.
   - I guess this sets VLAN tag to the network traffic, so we don't need *pfSense* or *netgraph*.
+- IPv6: set *Connection type* to *Native*
   
 ### Debug
 - If it is the first time to use the certificates, it takes several rounds of authentication. Just wait.
@@ -168,4 +169,3 @@ Please make sure the NAT acceleration is enabled. (Web GUI -> Tools-> HW acceler
 - [dslreports.com](https://www.dslreports.com/forum/uverse): A great forum with many useful information.
 
 [Back to menu](#menu)
-

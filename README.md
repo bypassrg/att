@@ -16,7 +16,7 @@ Now, the home router connects optical network terminal(ONT) directly. You should
 
   
 ## Prerequisites
-- [Python 3](https://www.python.org/downloads/release/python-373/) for the local http server. There are many alternatives.
+- [Python 3](https://www.python.org/downloads/release/python-373/) for the local http server. There are many alternatives(e.g. [mobaxterm](https://mobaxterm.mobatek.net/)).
 - Basic knowledge of POSIX commands (cd, mkdir, wget, etc.).
 - A NVG510 or NVG589
 
@@ -103,7 +103,7 @@ I cannot use the build-in *wpa\_supplicant v0.6* in Asuswrt-Merlin to achieve my
 
 - Start python http server. `python -m http.server`
 - ssh to your router. (You need to enable ssh in the web GUI.)
-- Download the [packages](packages.tar.gz) and unzip it. `wget https://github.com/bypassrg/att/blob/master/packages.tar.gz && tar -xzf packages.tar.gz`
+- Download the [packages](packages.tar.gz) and unzip it. `wget https://raw.githubusercontent.com/bypassrg/att/master/packages.tar.gz && tar -xzf packages.tar.gz`
 - Download *EAP-TLS_8021x_XXXX* file from your local http server. `wget https://YOUR_LOCAL_IP:8000/EAP-TLS_8021x_XXXX.tar.gz`
   - Unzip and copy files to */jffs/EAP*. `mkdir /jffs/EAP && tar xzf EAP-TLS_8021x_XXXX.tar.gz -C /jffs/EAP ` 
   - Modify *wpa_supplicant.conf*. Set *\*.pem* to the absolute path.
@@ -115,7 +115,7 @@ I cannot use the build-in *wpa\_supplicant v0.6* in Asuswrt-Merlin to achieve my
 - Install Entware in your router.
   - Install in the usb drive. [Entware](https://github.com/RMerl/asuswrt-merlin/wiki/Entware)
   - Install in jffs. Run this script: [entware_jffs.sh](https://github.com/bypassrg/att/blob/master/entware_jffs.sh)  
-  `wget -O - https://github.com/bypassrg/att/blob/master/entware_jffs.sh |sh`
+  `wget -O - https://raw.githubusercontent.com/bypassrg/att/master/entware_jffs.sh |sh`
 - Install wpa\_supplicant and dependencies.  
   <!-- `wget -O - https://github.com/bypassrg/att/blob/master/install_wpa.sh |sh` -->
   ```
@@ -168,5 +168,6 @@ Some useful links
 - [earlz](http://earlz.net/view/2012/06/07/0026/rooting-the-nvg510-from-the-webui): Rooting The NVG510 from the WebUI
 - [nomotion](https://www.nomotion.net/blog/sharknatto/): NVG589 root exploit
 - [dslreports.com](https://www.dslreports.com/forum/uverse): A great forum with many useful information.
+- [jsolo1@dslreports.com](https://www.dslreports.com/profile/422016): Provides many helpful & useful suggestions.
 
 [Back to menu](#menu)

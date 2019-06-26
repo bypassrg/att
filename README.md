@@ -99,7 +99,7 @@ Credit: [devicelocksmith](https://www.devicelocksmith.com/2018/12/eap-tls-creden
 
 ### Update wpa_supplicant in Asuswrt-Merlin
 
-I cannot use the build-in *wpa\_supplicant v0.6* in Asuswrt-Merlin to achieve my goal, so I compiled the *wpa\_supplicant* v2.7 from [Entware repository](https://github.com/Entware/Entware). Here I provide the necessary binary files. If you are working on a different model, you may need to compile *wpa\_supplicant* from the source. [check this](#compile-entware-packages-from-source).
+I cannot use the build-in *wpa\_supplicant v0.6* in Asuswrt-Merlin to achieve my goal, so I compiled the *wpa\_supplicant* v2.7 from [Entware repository](https://github.com/Entware/Entware). Here I provide the necessary binary files. **If you are working on a different model, you may need to compile *wpa\_supplicant* from the source. [check this](#compile-entware-packages-from-source).**
 
 - Start python http server. `python -m http.server`
 - ssh to your router. (You need to enable ssh in the web GUI.)
@@ -116,6 +116,9 @@ I cannot use the build-in *wpa\_supplicant v0.6* in Asuswrt-Merlin to achieve my
   - Install in the usb drive. [Entware](https://github.com/RMerl/asuswrt-merlin/wiki/Entware)
   - Install in jffs. Run this script: [entware_jffs.sh](https://github.com/bypassrg/att/blob/master/entware_jffs.sh)  
   `wget -O - https://raw.githubusercontent.com/bypassrg/att/master/entware_jffs.sh |sh`
+    - **Check your router's architecture** `uname -rm`. If you are not using *armv7*, you must use the correct Enware installation script. 
+    - [Deploying Entware](https://github.com/Entware/Entware/wiki/Install-on-Asus-stock-firmware#deploying-entware)
+	- Replace the URL in *entware_jffs.sh* accordingly.
 - Install wpa\_supplicant and dependencies.  
   <!-- `wget -O - https://github.com/bypassrg/att/blob/master/install_wpa.sh |sh` -->
   ```

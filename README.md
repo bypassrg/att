@@ -45,7 +45,7 @@ If NVG510 has no connection to internet, you may want to setup a local server fo
 - `chmod +x /tmp/busybox`
 - `/tmp/busybox dd if=/dev/mtdblock4 of=/tmp/mfg.dat bs=1k`
 - `mkdir /tmp/images` 
-- `mount -o blind /tmp/images /www/att/imges`
+- `mount -o blind /tmp/images /www/att/images`
 - `cp /tmp/mfg.dat /www/att/images`
 - `cd /tmp`
 - `tar cf cert.tar /etc/rootcert/`

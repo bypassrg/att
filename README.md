@@ -25,6 +25,8 @@ Now, the home router connects optical network terminal(ONT) directly. You should
 The certificates extracted from both NVG510 and NVG589 work, however NVG510 costs less and is easier to root.
 - [NVG510](#nvg510)
 - [NVG589](#nvg589) (maybe NVG599)
+- [BGW210](#bgw210)
+
 ### NVG510
 #### Rooting
 Credit: [earlz](http://earlz.net/view/2012/06/07/0026/rooting-the-nvg510-from-the-webui)
@@ -90,6 +92,9 @@ Credit: [nomotion](https://www.nomotion.net/blog/sharknatto/)
   ```
 - Download http://192.168.1.254/images/mfg.dat and http://192.168.1.254/images/cert.tar to your **local** device.
 
+### BGW210
+Credit: Streiw
+- [reddit link](https://www.reddit.com/r/ATT/comments/g59rwm/bgw210700_root_exploitbypass/)
 
 [Back to menu](#menu)
 ## Configuring 802.1x authentication
@@ -138,7 +143,7 @@ I cannot use the build-in *wpa\_supplicant v0.6* in Asuswrt-Merlin to achieve my
 
 ### Configure Asuswrt-Merlin via web GUI
 - In *WAN* tab, set *MAC Address* to *identity* value which you can find in *wpa_supplicant.conf*.
-- Enable *AiProtection*.
+- ~Enable *AiProtection*.~
   - I guess this sets VLAN tag to the network traffic, so we don't need *pfSense* or *netgraph*.
 - IPv6: set *Connection type* to *Native*
   

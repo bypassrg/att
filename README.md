@@ -165,14 +165,6 @@ Some useful links
    A: Please make sure the NAT acceleration is enabled. (Web GUI -> Tools-> HW acceleration). If it says *incompatible with*, you need to turn off some services.
 
 
-### To-dos
-- [ ] Cross compile *wpa_supplicant*, so we don't need to install *Entware*.
-- [ ] Ask Merlin to update *wpa_supplicant*.
-- [ ] Try to use Openwrt/ddwrt to bypass AT&T's RG.
-- [ ] Write a doc for compiling Entware packages from the source.
-
-### Donation
-- Bitcoin: 18hUjgNARRKWXr7hG9n62pWscZ4862TL6Q
 
 [Back to menu](#menu)
 ## Credits & References
